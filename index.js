@@ -101,16 +101,8 @@ app.listen(9822, () => {
     }
     else
     {
-        if ((new Date().getTime() - config.spotify.token_expires) > 3600000) // if token is expired, get new one
-        {
-            spotifyApi.setRefreshToken(config.spotify.refresh_token)
-            RefreshSpotifyToken();
-        }
-        else
-        {
-            spotifyApi.setAccessToken(config.spotify.access_token) // load tokens from config file and use it for calls
-            spotifyApi.setRefreshToken(config.spotify.refresh_token)
-        }
+        spotifyApi.setRefreshToken(config.spotify.refresh_token)
+        RefreshSpotifyToken();
         setInterval(async () => {
             RefreshSpotifyToken();
         }, 3600 / 2 * 1000);
@@ -123,7 +115,7 @@ async function RefreshSpotifyToken()
     const data = await spotifyApi.refreshAccessToken();
     const access_token = data.body['access_token'];
     const refresh_token = data.body['refresh_token'];
-
+    console.log("Refreshing Spotify access token...");
     config.spotify.access_token = access_token;
     config.spotify.refresh_token = refresh_token;
     jsonfile.writeFile("./config.json", config);
