@@ -112,15 +112,13 @@ app.listen(9822, () => {
 
 async function RefreshSpotifyToken()
 {
+    spotifyApi.setRefreshToken(config.spotify.refresh_token)
     const data = await spotifyApi.refreshAccessToken();
     const access_token = data.body['access_token'];
-    const refresh_token = data.body['refresh_token'];
     console.log("Refreshing Spotify access token...");
     config.spotify.access_token = access_token;
-    config.spotify.refresh_token = refresh_token;
-    jsonfile.writeFile("./config.json", config);
+    jsonfile.writeFile("./config.json", config, { spaces: 2 });
     spotifyApi.setAccessToken(access_token);
-    spotifyApi.setRefreshToken(refresh_token);
 }
 
 async function GetCurrentSong()
