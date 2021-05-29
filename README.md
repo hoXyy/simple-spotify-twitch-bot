@@ -1,7 +1,7 @@
 # Simple Spotify Twitch Bot
 Simple Twitch bot that displays the currently playing song on a specific Spotify account.
 ![Example](https://i.imgur.com/Dst1zrb.png)
-__The Spotify song link is ommited for local files__
+*The Spotify song link is ommited for local files*
 
 # Setup
 Clone the repository, run `npm install` and fill in the necessary information in the `config.json` file.
