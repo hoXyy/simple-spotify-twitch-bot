@@ -112,7 +112,6 @@ app.listen(9822, () => {
 
 async function RefreshSpotifyToken()
 {
-    spotifyApi.setRefreshToken(config.spotify.refresh_token)
     const data = await spotifyApi.refreshAccessToken();
     const access_token = data.body['access_token'];
     console.log("Refreshing Spotify access token...");
