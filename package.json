@@ -1,0 +1,15 @@
+{
+  "name": "spotify-song-bot",
+  "version": "1.0.0",
+  "description": "Simple Twitch bot that displays the currently playing song on a specific Spotify account.",
+  "main": "index.js",
+  "author": "hoxi",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.17.1",
+    "jsonfile": "^6.1.0",
+    "pretty-ms": "^7.0.1",
+    "spotify-web-api-node": "^5.0.2",
+    "tmi.js": "^1.8.3"
+  }
+}
