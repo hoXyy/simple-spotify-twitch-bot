@@ -18,7 +18,7 @@ The correct syntax of the config file is the following:
 {
   "spotify": {
     "client_id": "<Spotify client ID>",
-    "client_secret": "<Spotify client secret>",
+    "client_secret": "<Spotify client secret>"
   },
   "twitch": {
     "username": "<Twitch username of the account you want to use for the bot>",

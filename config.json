@@ -1,0 +1,12 @@
+{
+    "spotify": {
+      "client_id": "<Spotify client ID>",
+      "client_secret": "<Spotify client secret>"
+    },
+    "twitch": {
+      "username": "<Twitch username of the account you want to use for the bot>",
+      "channel": "<Channel you want the bot to join and post in>",
+      "oauth_token": "<OAuth token to log into the bot account>",
+      "command": "!song"
+    }
+  }
