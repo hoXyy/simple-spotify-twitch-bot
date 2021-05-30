@@ -156,7 +156,7 @@ async function FormatSongString()
         const length = prettyms(songinfo.length, { colonNotation: true, secondsDecimalDigits: 0});
         songstring = `Current song: ${songinfo.artists.join(', ')} - ${songinfo.title} (${progress}/${length})`;
         if (songinfo.url) {
-            songstring += ` - ${songinfo.url}`
+            songstring += ` | ${songinfo.url}`
         }
     }
     else
