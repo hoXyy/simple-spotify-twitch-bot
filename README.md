@@ -8,7 +8,7 @@ Clone the repository, run `npm install` and fill in the necessary information in
 
 ### Config file
 The config file requires this info:
-* Spotify app client ID and secret (which you can get from the [Spotify Developer Site](https://developer.spotify.com/))
+* Spotify app client ID and secret (which you can get from the [Spotify Developer Site](https://developer.spotify.com/), set the callback URL to http://localhost:9822/callback/spotify)
 * Username and OAuth token (which you can get [here](https://twitchapps.com/tmi/)) of the account you want to use for the bot
 * Name of the channel you want the bot account to join and post in
 * Command you want to use to trigger the bot
